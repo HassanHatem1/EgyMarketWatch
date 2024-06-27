@@ -1,0 +1,71 @@
+.egy__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+.egy__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.egy__navbar-links-logo {
+  margin-right: 1rem;
+}
+.egy__navbar-links-logo img {
+  height: 320px;
+  width: 640px;
+}
+.egy__navbar-links-list {
+  display: flex;
+  flex-direction: row;
+}
+.egy__navbar-links-list p {
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 25px;
+  margin: 0 4rem;
+  cursor: pointer;
+}
+.egy__navbar-menu {
+  margin-left: 1rem;
+  display: none;
+  position: relative;
+}
+.egy__navbar-menu-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: end;
+  padding: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: var(--color-footer);
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+.egy__navbar-menu-container p {
+  margin: 1rem 0;
+}
+@media screen and (max-width: 1050px) {
+    .egy__navbar-links-list {
+       display: none;
+    }
+    .egy__navbar-links-logo img {
+         height: 60px;
+         width: 120px;
+      }
+    .egy__navbar-menu {
+       display: flex;
+       font-size: 20px;
+       color: #fff;
+    }
+    
+}
