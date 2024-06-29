@@ -10,13 +10,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  max-width: 100%; /* Adjusted from 5000px for better responsiveness */
+  max-width: 100%; 
   margin: 0 auto;
 }
 
 .company-info, .footer-links, .contact-info, .social-media {
   flex: 1;
-  min-width: 250px; /* Adjusted min-width for better responsiveness */
+  min-width: 250px;
   color: #CCCCCC;
 }
 
@@ -27,9 +27,9 @@
 .footer-links ul, .social-media a {
   list-style: none;
   padding: 0;
-  color: #ADD8E6; /* Light Blue */
+  color: #ADD8E6; 
   text-decoration: none;
-  margin-right: 15px; /* Added for social media links */
+  margin-right: 15px; 
 }
 
 .footer-bottom {
@@ -47,6 +47,6 @@
   }
 
   .footer-container {
-    font-size: 0.75rem; /* Further reduced for small screens */
+    font-size: 0.5rem; /* Further reduced for small screens */
   }
 }

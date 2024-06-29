@@ -10,7 +10,7 @@ const NewsSection = () => {
       const response = await fetch('https://newsapi.org/v2/top-headlines?country=eg&apiKey=6cb4b627a1c449688fee50b1c8b4cd72');
       const data = await response.json();
       setArticles(data.articles);
-      // console.log(data.articles);
+      console.log(data.articles);
     };
     fetchNews();
   }, []);

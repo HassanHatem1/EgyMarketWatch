@@ -23,7 +23,7 @@
   font-size: 1rem; /* Adjusted from 2rem for better initial readability */
   flex-wrap: wrap;
   margin: 0 auto; /* Changed from fixed margin to auto for better centering */
-  max-width: 1700px; /* Added max-width to control expansion on large screens */
+  max-width: 1550px; /* Added max-width to control expansion on large screens */
 }
 
 /* Medium devices (tablets, 768px and up) */
