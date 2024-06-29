@@ -3,6 +3,9 @@ import './currency.css';
 
 const Exchangerates = () => {
   const [exchangeRates, setExchangeRates] = useState([]);
+  const [amount, setAmount] = useState('');
+  const [convertedAmount, setConvertedAmount] = useState('');
+  const [selectedCurrency, setSelectedCurrency] = useState('USD');
 
   useEffect(() => {
     const fetchExchangeRates = async () => {
@@ -45,16 +48,72 @@ const Exchangerates = () => {
 
     fetchExchangeRates();
   }, []);
+  const [isEgpToSelectedCurrency, setIsEgpToSelectedCurrency] = useState(true); // New state for conversion direction
+
+  const handleConvert = () => {
+    const selectedRate = exchangeRates.find(rate => rate.currency === selectedCurrency);
+    if (!selectedRate) return; // Guard clause if selected currency rate is not found
+
+    let result = 0;
+    if (isEgpToSelectedCurrency) {
+      result = amount * selectedRate.rate;
+    } else {
+      result = amount / selectedRate.rate;
+    }
+    setConvertedAmount(result.toFixed(2));
+  };
 
   return (
     <div className="exchange-rates-container">
       {exchangeRates.length ? (
-        exchangeRates.map(({ currency, name, rate }) => (
-          <div key={currency} className="exchange-rate-item">
-            <p>{`${name} (${currency}/EGP)`}</p>
-            <p>{1 / rate}</p>
+        <>
+          {exchangeRates.map(({ currency, name, rate }) => (
+            <div key={currency} className="exchange-rate-item">
+              <p>{`${name} (${currency}/EGP)`}</p>
+              <p>{`Rate: ${rate.toFixed(4)}`}</p>
+            </div>
+          ))}
+          <div className="conversion-tool">
+            <h3 id="convert">Convert Currency</h3>
+            <input
+              type="number"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              placeholder="Enter amount"
+            />
+            <select
+              value={selectedCurrency}
+              onChange={(e) => setSelectedCurrency(e.target.value)}
+            >
+              {exchangeRates.map(({ currency, name }) => (
+                <option key={currency} value={currency}>{`${name}`}</option>
+              ))}
+            </select>
+            <div>
+              <input
+                type="radio"
+                id="egpToSelected"
+                name="conversionDirection"
+                value="egpToSelected"
+                checked={isEgpToSelectedCurrency}
+                onChange={() => setIsEgpToSelectedCurrency(true)}
+              />
+              <label htmlFor="egpToSelected"> EGP to {selectedCurrency} </label>
+
+              <input
+                type="radio"
+                id="selectedToEgp"
+                name="conversionDirection"
+                value="selectedToEgp"
+                checked={!isEgpToSelectedCurrency}
+                onChange={() => setIsEgpToSelectedCurrency(false)}
+              />
+              <label htmlFor="selectedToEgp"> {selectedCurrency} to EGP </label>
+            </div>
+            <button onClick={handleConvert}>Convert</button>
+            <p>Converted Amount in {isEgpToSelectedCurrency ? selectedCurrency : 'EGP'} : {convertedAmount}</p>
           </div>
-        ))
+        </>
       ) : (
         <p>Loading...</p>
       )}
