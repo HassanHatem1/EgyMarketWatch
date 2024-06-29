@@ -1,13 +1,21 @@
 # EgyMarketWatch
-Website Url : <a>egymarketwatch.me</a>
-Note : The NewsApi Free Plan doesn't work on deployed version so to check the news use the local version Using npm start
-# Tasks Satisified 
-- All Obligatory Tasks Satisfied 
-** Optional Tasks Satisifed **
--Implement a feature to allow the user to click on the news items and navigate to a details webpage to see all news details.
--Implement a feature to allow users to convert between EGP and USD based on the current exchange rates.
--Implement a script to automate the deployment of the website on the server when committing any change to the main branch.
 
+**Website URL:** [egymarketwatch.me](http://egymarketwatch.me)
+
+**Note:** The NewsApi Free Plan doesn't work on the deployed version. To check the news, please use the local version by running `npm start`.
+
+## Tasks Satisfied
+
+### Obligatory Tasks
+- All obligatory tasks have been satisfied.
+
+### Optional Tasks
+- Implemented a feature allowing users to click on news items and navigate to a details webpage for all news details.
+- Implemented a feature allowing users to convert between EGP and USD based on current exchange rates.
+- Implemented a script to automate the deployment of the website on the server when committing any change to the main branch.
+
+Screenshot: 
+![Screenshot of EgyMarketWatch](Screenshot.png "EgyMarketWatch Screenshot")
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

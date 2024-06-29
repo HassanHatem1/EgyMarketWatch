@@ -69,8 +69,8 @@ const Exchangerates = () => {
         <>
           {exchangeRates.map(({ currency, name, rate }) => (
             <div key={currency} className="exchange-rate-item">
-              <p>{`${name} (${currency}/EGP)`}</p>
-              <p>{`Rate: ${rate.toFixed(4)}`}</p>
+              <p>{`(EGP/${currency})         ${name} `}</p>
+              <p>{`Rate: ${1/rate.toFixed(4)}`}</p>
             </div>
           ))}
           <div className="conversion-tool">
