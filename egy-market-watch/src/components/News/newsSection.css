@@ -1,33 +1,51 @@
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); /* Creates a responsive grid layout */
-    gap: 20px; 
-    padding: 20px; 
-  }
-  
-  .news-item {
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd;
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Ensures the content fits within the borders */
-    display: flex;
-    flex-direction: column; 
-  }
-  
-  .news-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area without losing aspect ratio */
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); /* More responsive grid layout */
+  gap: 20px;
+  padding: 20px;
+}
+
+.news-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.news-item h3, .news-item p {
+  padding: 10px 15px;
+  margin: 0;
+  color: var(--color-text);
+  font-size: 5rem; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .news-item h3 {
-    padding: 10px 15px; 
-    margin: 0; 
-    font-size: 4.5rem; 
+    font-size: 3rem; /* Smaller font size for h3 on smaller screens */
   }
+
   .news-item p {
-    padding: 0 15px 10px; 
-    margin: 0; 
-    color: var(--color-text);
-    font-size: 4rem; 
+    font-size: 2rem; /* Smaller font size for p on smaller screens */
   }
+
+  .news-grid {
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); /* Adjust for medium screens */
+  }
+}

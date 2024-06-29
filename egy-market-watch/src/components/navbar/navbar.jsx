@@ -25,7 +25,6 @@ const Navbar = () => {
                     <p> <a href="#news">News</a> </p>
                     <p> <a href="#gold">Gold Prices</a> </p>
                     <p> <a href="#rates">Exchange Rates</a> </p>
-                    <p> <a href="/">About Us</a> </p>
                 </div>
             </div>
             <div className="egy__navbar-menu">
@@ -48,7 +47,6 @@ const Navbar = () => {
                         <p> <a href="#news">News</a> </p>
                         <p> <a href="#gold">Gold Prices</a> </p>
                         <p> <a href="#rates">Exchange Rates</a> </p>
-                        <p> <a href="/">About Us</a> </p>
                     </div>
                 )}
 
