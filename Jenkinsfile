@@ -9,7 +9,7 @@ pipeline {
                     $class: 'GitSCM', 
                     branches: [[name: '*/main']], 
                     doGenerateSubmoduleConfigurations: false, 
-                    extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'egy-market-watch']], 
+                    extensions: [], 
                     submoduleCfg: [], 
                     userRemoteConfigs: [[url: 'https://github.com/HassanHatem1/EgyMarketWatch', credentialsId: 'hooks']]
                 ])
