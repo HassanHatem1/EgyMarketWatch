@@ -1,18 +1,6 @@
 # EgyMarketWatch
 
-**Website URL:** [egymarketwatch.me](http://egymarketwatch.me)
-
 **Note:** The NewsApi Free Plan doesn't work on the deployed version. To check the news, please use the local version by running `npm start`.
-
-## Tasks Satisfied
-
-### Obligatory Tasks
-- All obligatory tasks have been satisfied.
-
-### Optional Tasks
-- Implemented a feature allowing users to click on news items and navigate to a details webpage for all news details.
-- Implemented a feature allowing users to convert between EGP and USD based on current exchange rates.
-- Implemented a script to automate the deployment of the website on the server when committing any change to the main branch.
 
 Screenshot: 
 ![Screenshot of EgyMarketWatch](Screenshot.png "EgyMarketWatch Screenshot")
